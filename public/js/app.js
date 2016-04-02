@@ -24,7 +24,8 @@ var myApp = angular.module('myApp', [
 	config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
 		$routeProvider.when('/pageOne', {templateUrl: 'templates/pageOne.html'});
 		$routeProvider.when('/pageTwo', {templateUrl: 'templates/pageTwo.html'});
-		$routeProvider.otherwise({redirectTo: '/index.html'});
+		$routeProvider.when('/home', {templateUrl: 'templates/home.html'});
+		$routeProvider.otherwise({redirectTo: '/home'});
 
 		$locationProvider.html5Mode({enabled: true, requireBase: false});
 
