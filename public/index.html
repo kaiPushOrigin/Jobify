@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+  <head>
+    <title>NodeJS Starter Application</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <link href="stylesheets/c3.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-2.2.2.min.js" charset="utf-8"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"> </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
+  </head>
+
+  <body>
+      <div class="container">
+          <h1>Contact List</h1>
+          <!-- <table class="table">
+              <thead>
+                  <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Contact Number </th>
+                      <th>Actions</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td><input class="form-control" ng-model="person.name"></td>
+                      <td><input class="form-control" ng-model="person.email"></td>
+                      <td><input class="form-control" ng-model="person.number"></td>
+                      <td><button class="btn btn-primary" ng-click="addPerson()">Add</button></td>
+                      <td><button class="btn btn-primary" ng-click="update()">Update</button></td>
+                  </tr>
+              </tbody> -->
+              <a href="/pageOne">Page One</a>
+              <a href="/pageTwo">Page Two</a>
+              <!-- <div id="chart"></div> -->
+              <div class="">
+
+              </div>
+
+              <div ng-view></div>
+
+          </div>
+      </div>
+
+
+
+    <!-- Angular JS Lib -->
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/c3.min.js"></script>
+    <!-- JQuery -->
+
+
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script> -->
+
+    <script src="js/app.js"></script>
+
+    <script src="js/controllers.js"></script>
+
+    <!-- <script type="text/javascript">
+    var chart = c3.generate({
+    data: {
+        x: 'x',
+        columns: [
+            ['x', '2014-07-24', '2014-07-25', '2014-07-26', '2014-07-27', '2014-07-28', '2014-07-29'],
+            ['temperature', 5, 2, 4, -3, 6, 5],
+            ['data2', 130, 340, 200, 500, 250, 350],
+            ['data3', 500, 50, 250, 450, 60, 350]
+        ],
+        axes: {
+         'temperature': 'y2'
+        },
+        type: 'bar',
+        types: {
+          temperature: 'line'
+        },
+    },
+    subchart: {
+      show: true
+    },
+    zoom: {
+      enabled: true
+    },
+    axis: {
+        x: {
+            type: 'timeseries',
+            tick: {
+                format: '%Y-%m-%d'
+            }
+        },
+        y: {
+          label: {
+            text: 'Some data',
+            position: 'outer-middle'
+          }
+        },
+        y2: {
+          show: true,
+          label: {
+            text: 'avg. temperature',
+            position: 'outer-middle'
+          },
+          max: 30,
+          min: -10
+        }
+    }
+});
+    </script> -->
+
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+
+</html>
