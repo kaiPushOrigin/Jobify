@@ -14,6 +14,8 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     <link href="stylesheets/c3.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
     <script src="js/jquery-2.2.2.min.js" charset="utf-8"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"> </script>
@@ -32,17 +34,17 @@
     #main
     {
         padding:3em 2em;
-        background-color:#333;
+        background-color:#34495e;
         position:absolute;
         top:50%;
         left:50%;
         margin-top:-150px;
         margin-left:-150px;
         width:350px;
-        height:300px;
+        height:360px;
         -moz-opacity: 0.35;
         -khtml-opacity: 0.35;
-        opacity: 0.35;
+        opacity: 0.8;
         -ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=35);
         filter: progid:DXImageTransform.Microsoft.Alpha(opacity=35);
         filter:alpha(opacity=35);
@@ -98,17 +100,7 @@ text-decoration:none;
                       <span class="icon-bar"></span>
                   </button>
               </div>
-              <!-- <a class="navbar-brand" href="#" style="text-align: center;"> -->
-                  <img id="" src="images/j-logo.png" width="4%" alt="Logo Thing main logo">
-              <!-- </a> -->
-              <!-- <div id="navbar" class="navbar-collapse collapse"> -->
-                  <!-- <ul class="nav navbar-nav"> -->
-                      <!-- <a href="#" class="brand"><img id="logo-navbar-middle" src="images/j-logo.png" width="50%" alt="Logo Thing main logo"></a> -->
-                      <!-- <li><a href="#">Settings</a></li>
-                      <li><a href="#">Profile</a></li>
-                      <li><a href="#">Help</a></li> -->
-                  <!-- </ul> -->
-              <!-- </div> -->
+          <img id="" src="images/j-logo.png" width="4%" alt="Logo Thing main logo">
           </div>
       </nav>
           <!-- <table class="table">
@@ -130,20 +122,23 @@ text-decoration:none;
                   </tr>
               </tbody> -->
       <div id="main">
-          <!-- <h2>
-              Jobify
-      </h2> -->
           <img src="images/guy.png" id="person" align="left"/>
-          <h2>JOBIFY</h2>
-          <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+          <h1 class="title">JOBIFY</h1>
+          <p class="statement">
+              Because we understand. <br>Because we feel. <br>We, find jobs.
+          </p>
+          <div class="form-group"><br><br>
+              <label for="year" class="year">Select the year you will be graduating</label>
+              <select class="form-control" id="selectYear">
+                  <option>2017</option>
+                  <option>2018</option>
+                  <option>2019</option>
+                  <option>2020</option>
+                  <option>2021</option>
+              </select><br>
+              <button class="btn btn-primary btn-block" type="submit">Submit</button>
           </div>
     </div>
-
-
-
-
 
       <div class="container">
           <a href="/pageOne">Page One</a>
@@ -154,10 +149,6 @@ text-decoration:none;
           </div>
 
           <div ng-view></div>
-      </div>
-
-
-          </div>
       </div>
 
 
