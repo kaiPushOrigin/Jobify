@@ -2,7 +2,85 @@
 
 <div class="container">
     <div class="analysis">
-        <h1>Job Prediction for 2018</h1>
+        <h1>Job Prediction for 2018 </h1>
     </div>
 
 </div>
+
+<div id="chart">
+
+
+
+</div>
+
+<div class="form-group"><br><br>
+    <label for="year" class="year">Select the year you will be graduating</label>
+    <select class="form-control" id="selectYear">
+        <option>2017</option>
+        <option>2018</option>
+        <option>2019</option>
+        <option>2020</option>
+        <option>2021</option>
+    </select><br>
+    <a href="/analysis"><button class="btn btn-primary btn-block" type="submit" ng-click="changeData()" >Submit</button></a>
+</div>
+
+<script type="text/javascript">
+// var chart = c3.generate({
+// data: {
+//     var chart = c3.generate({
+//     bindto: '#chart',
+//     data: {
+//       columns: [
+//         ['data1', 30, 200, 100, 400, 150, 250],
+//         ['data2', 50, 20, 10, 40, 15, 25]
+//       ]
+//     }
+// });
+
+//     x: 'x',
+//     columns: [
+//         ['x', '2014-07-24', '2014-07-25', '2014-07-26', '2014-07-27', '2014-07-28', '2014-07-29'],
+//         ['temperature', 5, 2, 4, -3, 6, 5],
+//         ['data2', 130, 340, 200, 500, 250, 350],
+//         ['data3', 500, 50, 250, 450, 60, 350]
+//     ],
+//     axes: {
+//      'temperature': 'y2'
+//     },
+//     type: 'bar',
+//     types: {
+//       temperature: 'line'
+//     },
+// },
+// subchart: {
+//   show: true
+// },
+// zoom: {
+//   enabled: true
+// },
+// axis: {
+//     x: {
+//         type: 'timeseries',
+//         tick: {
+//             format: '%Y-%m-%d'
+//         }
+//     },
+//     y: {
+//       label: {
+//         text: 'Some data',
+//         position: 'outer-middle'
+//       }
+//     },
+//     y2: {
+//       show: true,
+//       label: {
+//         text: 'avg. temperature',
+//         position: 'outer-middle'
+//       },
+//       max: 30,
+//       min: -10
+//     }
+// }
+// });
+</script>

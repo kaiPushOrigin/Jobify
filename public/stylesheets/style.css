@@ -2,7 +2,6 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-
 .navbar-brand
 {
     position: absolute;
@@ -31,4 +30,8 @@
 
 .title {
     font-style: italic;
+}
+
+.analysis {
+    color: black;
 }

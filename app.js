@@ -24,25 +24,47 @@ app.use(bodyParser.json()); //Need JSON from body
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
 
-app.get('/contactList', function(req, res) {
+app.get('/analysis', function(req, res) {
+
+    var values = [];
+    var dollars = [];
+
     console.log("I received a GET request");
     ibmdb.open("DRIVER={DB2};DATABASE=SQLDB;HOSTNAME=75.126.155.153;UID=user17284;PWD=Yo5azm1bAe1r;PORT=50000;PROTOCOL=TCPIP", function (err,conn) {
         if (err) return console.log(err);
 
-        conn.query("select SUM(\"Price in Contemporary Dollars\") AS PRICE from \"test\"", function (err, data) {     // tell
+        // conn.query("select SUM(\"Price in Contemporary Dollars\") AS PRICE from \"test\"", function (err, data) {
+        conn.query("select \"Price in $ 2014\" AS PRICE, \"Price in Contemporary Dollars\""+
+        "AS NETCHANGE FROM \"test\" FETCH FIRST 10 ROWS ONLY", function (err, rows) {     // tell
             if (err) console.log(err);
             else {
-                console.log(data);
-                console.log(data[0].PRICE);
-                res.json(data);
+                console.log(rows);
+
+                console.log(rows[0].PRICE);
+                // res.json(data);
             }
+            for (var i = 0; i < rows.length; i++) {
+                values.push(rows[i].PRICE);
+                console.log("Value at" + i + ":" + values[i]);
+            }
+            console.log(rows.length);
 
             conn.close(function () {
                 console.log('done');
             });
+            res.send(values);
         });
     });
 });
+
+// app.get('/analysis', function(req, res) {
+//     var hello = "hello";
+//     res.send(hello);
+// });
+
+// SELECT "Price in $ 2014" AS Dollars,"Price in Contemporary Dollars"  AS NetChange
+// FROM "USER17284"."test"
+// FETCH FIRST 10 ROWS ONLY
 
 
 
